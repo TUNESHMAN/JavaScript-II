@@ -512,3 +512,12 @@ console.log(runnersEmail);
 
 
 // Problem 3
+// Compute the sum of the donation of runners with shirt-size "M"
+let sumOfShirtSizeM = runners.map(function (addM) {
+  if (addM.shirt_size === "M") {
+    return (addM.donation);
+  }
+
+})
+
+console.log(sumOfShirtSizeM.reduce(addM));
