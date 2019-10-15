@@ -513,7 +513,7 @@ console.log(runnersEmail);
 let sumOfShirtSizeM = runners
   .filter(function(addM) {
     if (addM.shirt_size === "M") {
-      return (addM.donation);
+      return addM.donation;
     }
   })
   .reduce((total, addM) => total + addM.donation, 0);

@@ -4,6 +4,11 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
+var arr = [1, 2, 3, 4];
+function addToArr() {
+  return arr.push(5);
+}
+
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
