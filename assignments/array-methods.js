@@ -457,22 +457,20 @@ const runners = [
 
 // ==== Challenge 1: Use .forEach() ====
 // The event director needs both the first and last names of each runner for their running bibs. Combine both the first and last names and populate a new array called `fullNames`. This array will contain just strings.
-let fullNames = runners.map(function(combinedName) {
-  return `${combinedName.first_name}  ${combinedName.last_name}`;
-});
+let fullNames = runners.map(
+  combinedName => `${combinedName.first_name}  ${combinedName.last_name}`
+);
 console.log(fullNames);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runners' first names in uppercase because the director BECAME DRUNK WITH POWER. Populate an array called `firstNamesAllCaps`. This array will contain just strings.
-let firstNamesAllCaps = runners.map(function(name) {
-  return name.first_name.toUpperCase(name);
-});
+let firstNamesAllCaps = runners.map(name => name.first_name.toUpperCase());
 
 console.log(firstNamesAllCaps);
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue. We need a filtered version of the runners array, containing only those runners with large sized shirts so they can choose a different size. This will be an array of objects.
-let runnersLargeSizeShirt = runners.filter(function(wear) {
+let runnersLargeSizeShirt = runners.filter(wear => {
   if (wear.shirt_size === "L") {
     return true;
   }
@@ -481,9 +479,10 @@ console.log(runnersLargeSizeShirt);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
-let ticketPriceTotal = runners.reduce(function(total, donations) {
-  return total + donations.donation;
-}, 0);
+let ticketPriceTotal = runners.reduce(
+  (total, donations) => total + donations.donation,
+  0
+);
 console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
@@ -503,21 +502,20 @@ console.log(donationsLessThan100AndShirtSize2XL);
 
 // Problem 2
 // Create an array that consists of the email of all runners
-let runnersEmail = runners.map(function (mail) {
+let runnersEmail = runners.map(function(mail) {
   return mail.email;
-  
-})
+});
 
 console.log(runnersEmail);
 
-
 // Problem 3
 // Compute the sum of the donation of runners with shirt-size "M"
-let sumOfShirtSizeM = runners.map(function (addM) {
-  if (addM.shirt_size === "M") {
-    return (addM.donation);
-  }
+let sumOfShirtSizeM = runners
+  .filter(function(addM) {
+    if (addM.shirt_size === "M") {
+      return (addM.donation);
+    }
+  })
+  .reduce((total, addM) => total + addM.donation, 0);
 
-})
-
-console.log(sumOfShirtSizeM.reduce(addM));
+console.log(sumOfShirtSizeM);

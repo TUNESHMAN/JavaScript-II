@@ -67,10 +67,22 @@ function multiplyNums(x, y, cb) {
 console.log(multiplyNums(2,3, "multiply"));
 
 
-function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
-}
+// function contains(item, list, cb) {
+//   // contains checks if an item is present inside of the given array/list.
+//   // Pass true to the callback if it is, otherwise pass false.
+//   const isInArray= function () {
+//     for (let i=0; i<arr.length; i++){
+//       if (arr[i] === list ){
+//         return true;
+//       }
+//     }
+    
+//   }
+  
+
+// }
+// console.log(cb(isInArray()));
+
 
 /* STRETCH PROBLEM */
 
