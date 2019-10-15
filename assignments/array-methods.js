@@ -482,7 +482,7 @@ console.log(runnersLargeSizeShirt);
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations and save the total into a ticketPriceTotal variable.
 let ticketPriceTotal = runners.reduce(function(total, donations) {
-  return total + (donations.donation);
+  return total + donations.donation;
 }, 0);
 console.log(ticketPriceTotal);
 
@@ -491,16 +491,24 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 // The event director needs the details of runners with donations less than 100 and shirt size "2XL"
-let donationsLessThan100AndShirtSize2XL = runners.filter(function (smalldonation) {
-  if (smalldonation.donation < 100 && smalldonation.shirt_size === "2XL"){
+let donationsLessThan100AndShirtSize2XL = runners.filter(function(
+  smalldonation
+) {
+  if (smalldonation.donation < 100 && smalldonation.shirt_size === "2XL") {
     return true;
   }
-  
 });
 
 console.log(donationsLessThan100AndShirtSize2XL);
 
-
 // Problem 2
+// Create an array that consists of the email of all runners
+let runnersEmail = runners.map(function (mail) {
+  return mail.email;
+  
+})
+
+console.log(runnersEmail);
+
 
 // Problem 3
